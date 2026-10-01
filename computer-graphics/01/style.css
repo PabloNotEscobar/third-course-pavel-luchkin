@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+.controls {
+  margin-bottom: 16px;
+}
+
+.controls label {
+  margin-right: 10px;
+}
+
+.controls input {
+  width: 60px;
+}
+
+canvas {
+  border: 1px solid #333;
+  background: #fff;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 16px auto;
+}
+
+th, td {
+  border: 1px solid #999;
+  padding: 4px 10px;
+  font-size: 14px;
+}

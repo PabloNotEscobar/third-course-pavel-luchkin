@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>ЦДА — растровая линия</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Алгоритм ЦДА</h1>
+
+  <div class="controls">
+    <label>x1 <input type="number" id="x1" value="2"></label>
+    <label>y1 <input type="number" id="y1" value="2"></label>
+    <label>x2 <input type="number" id="x2" value="20"></label>
+    <label>y2 <input type="number" id="y2" value="8"></label>
+    <button id="build">Построить</button>
+  </div>
+
+  <canvas id="canvas" width="600" height="450"></canvas>
+
+  <h2>Таблица шагов</h2>
+  <table id="steps">
+    <thead>
+      <tr>
+        <th>шаг</th>
+        <th>x до округления</th>
+        <th>y до округления</th>
+        <th>пиксель x</th>
+        <th>пиксель y</th>
+      </tr>
+    </thead>
+    <tbody id="stepsBody"></tbody>
+  </table>
+
+  <script src="app.js"></script>
+</body>
+</html>
