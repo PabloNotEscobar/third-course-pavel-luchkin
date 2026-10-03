@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.controls input {
+  flex: 1;
+  padding: 6px;
+}
+
+.controls button {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.error {
+  color: #c0392b;
+  min-height: 20px;
+  font-size: 14px;
+}
+
+#list {
+  padding-left: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  border: 1px solid #999;
+  padding: 6px 10px;
+}
