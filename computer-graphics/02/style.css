@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  max-width: 900px;
+}
+
+section {
+  margin-bottom: 36px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.controls input {
+  width: 70px;
+}
+
+canvas {
+  border: 1px solid #333;
+  background: #fff;
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 10px;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #999;
+  padding: 4px 8px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.pixel-list {
+  font-family: monospace;
+  font-size: 13px;
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 8px;
+  background: #fafafa;
+}
+
+pre {
+  background: #fafafa;
+  border: 1px solid #ccc;
+  padding: 10px;
+  white-space: pre-wrap;
+}

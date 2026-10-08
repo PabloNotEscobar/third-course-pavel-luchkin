@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>ЦДА vs Брезенхем</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>ЦДА и алгоритм Брезенхема</h1>
+
+  <section>
+    <div class="controls">
+      <label>x1 <input type="number" id="x1" value="2"></label>
+      <label>y1 <input type="number" id="y1" value="2"></label>
+      <label>x2 <input type="number" id="x2" value="8"></label>
+      <label>y2 <input type="number" id="y2" value="5"></label>
+
+      <label>
+        Алгоритм
+        <select id="algorithm">
+          <option value="dda">ЦДА</option>
+          <option value="bresenham" selected>Брезенхем</option>
+        </select>
+      </label>
+
+      <button id="build">Построить</button>
+    </div>
+
+    <canvas id="canvas" width="600" height="450"></canvas>
+
+    <h2>Выбранные пиксели (текущий отрезок, текущий алгоритм)</h2>
+    <div id="pixelList" class="pixel-list"></div>
+  </section>
+
+  <section>
+    <h2>Таблица работы Брезенхема (для текущих x1,y1,x2,y2)</h2>
+    <table id="bresenhamTable">
+      <thead>
+        <tr>
+          <th>шаг</th><th>x</th><th>y</th><th>error</th><th>error2</th>
+          <th>изменился x</th><th>изменился y</th>
+        </tr>
+      </thead>
+      <tbody id="bresenhamBody"></tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Сравнение ЦДА и Брезенхема на 5 отрезках</h2>
+    <button id="compare">Сравнить</button>
+    <table id="compareTable">
+      <thead>
+        <tr>
+          <th>отрезок</th><th>тип</th><th>пикселей ЦДА</th><th>пикселей Брезенхем</th>
+          <th>совпали?</th><th>отличия</th>
+        </tr>
+      </thead>
+      <tbody id="compareBody"></tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Эксперимент: скорость ЦДА и Брезенхема</h2>
+    <div class="controls">
+      <label>Количество отрезков <input type="number" id="experimentCount" value="2000"></label>
+      <label>Повторов <input type="number" id="experimentRuns" value="5"></label>
+      <button id="runExperiment">Запустить эксперимент</button>
+    </div>
+    <pre id="experimentResult"></pre>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
