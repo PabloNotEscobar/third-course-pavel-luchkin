@@ -1,0 +1,126 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+.form {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.form h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.form label {
+  display: block;
+  margin: 10px 0 4px;
+  font-size: 14px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+button {
+  padding: 10px 14px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.message {
+  min-height: 20px;
+  margin: 10px 0 0;
+  font-size: 14px;
+}
+
+.message.error,
+.status.error {
+  color: #c0392b;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.controls input {
+  flex: 1;
+  min-width: 260px;
+  padding: 10px 12px;
+  font-size: 16px;
+}
+
+.status {
+  min-height: 20px;
+  margin: 0 0 16px;
+}
+
+.posts {
+  display: grid;
+  gap: 12px;
+}
+
+.post-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.post-card.editing {
+  border-color: #2d7ff9;
+}
+
+.post-id {
+  margin: 0 0 4px;
+  font-size: 12px;
+  color: #777;
+}
+
+.post-card h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.post-card p {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: #444;
+}
+
+.post-buttons {
+  display: flex;
+  gap: 8px;
+}

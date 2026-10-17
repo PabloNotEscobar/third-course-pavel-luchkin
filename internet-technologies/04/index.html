@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ЛР 4 - CRUD публикаций</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Публикации</h1>
+
+    <form id="postForm" class="form" novalidate>
+      <h2 id="formTitle">Новая публикация</h2>
+
+      <label for="titleInput">Заголовок</label>
+      <input id="titleInput" type="text" placeholder="Заголовок">
+
+      <label for="bodyInput">Текст</label>
+      <textarea id="bodyInput" rows="4" placeholder="Текст публикации"></textarea>
+
+      <div class="form-buttons">
+        <button id="submitButton" type="submit">Сохранить</button>
+        <button id="cancelButton" type="button">Отмена</button>
+      </div>
+
+      <p id="message" class="message"></p>
+    </form>
+
+    <section class="controls">
+      <button id="loadButton" type="button">Загрузить</button>
+      <input
+        id="filterInput"
+        type="text"
+        placeholder="Поиск по заголовку и тексту"
+      >
+    </section>
+
+    <p id="status" class="status"></p>
+
+    <section id="posts" class="posts"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
