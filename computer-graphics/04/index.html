@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отсечение отрезков: Коэн-Сазерленд</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Отсечение отрезков: алгоритм Коэна-Сазерленда</h1>
+
+  <section>
+    <h2>Окно отсечения</h2>
+    <div class="controls">
+      <label>xmin <input type="number" id="xmin" value="10"></label>
+      <label>ymin <input type="number" id="ymin" value="8"></label>
+      <label>xmax <input type="number" id="xmax" value="30"></label>
+      <label>ymax <input type="number" id="ymax" value="22"></label>
+    </div>
+
+    <h2>Что отсекаем</h2>
+    <div class="controls">
+      <label>
+        Режим
+        <select id="mode">
+          <option value="segment">Один отрезок</option>
+          <option value="polyline">Ломаная</option>
+        </select>
+      </label>
+    </div>
+
+    <div id="segmentFields" class="controls">
+      <label>x1 <input type="number" id="x1" value="5"></label>
+      <label>y1 <input type="number" id="y1" value="12"></label>
+      <label>x2 <input type="number" id="x2" value="35"></label>
+      <label>y2 <input type="number" id="y2" value="18"></label>
+    </div>
+
+    <div id="polylineFields" class="controls" hidden>
+      <label>
+        Точки ломаной (по одной на строке: x y)
+        <textarea id="points" rows="6">2 5
+12 2
+20 18
+30 8
+36 22</textarea>
+      </label>
+    </div>
+
+    <div class="controls">
+      <button id="build">Построить и отсечь</button>
+    </div>
+
+    <p id="message" class="message"></p>
+
+    <canvas id="canvas" width="600" height="450"></canvas>
+    <p class="legend">
+      Синий прямоугольник: окно. Серая линия: исходный отрезок.
+      Красная линия: видимая часть после отсечения.
+    </p>
+
+    <pre id="codes"></pre>
+  </section>
+
+  <section>
+    <h2>Таблица итераций</h2>
+    <div id="traces"></div>
+  </section>
+
+  <section>
+    <h2>Обязательные тесты (окно 10, 8, 30, 22)</h2>
+    <div class="controls">
+      <button id="runTests">Прогнать тесты</button>
+      <span id="testSummary"></span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>№</th><th>тип отрезка</th><th>отрезок</th>
+          <th>ожидание</th><th>результат</th><th>итог</th><th></th>
+        </tr>
+      </thead>
+      <tbody id="testsBody"></tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Эксперимент со случайными отрезками</h2>
+    <div class="controls">
+      <label>Количество <input type="number" id="expCount" value="1000"></label>
+      <label>Seed <input type="number" id="expSeed" value="1"></label>
+      <button id="runExperiment">Запустить</button>
+    </div>
+    <p class="legend">
+      Отрезки строятся вокруг текущего окна (в прямоугольнике, расширенном на 15 в каждую сторону).
+      Одинаковый seed даёт одинаковый набор отрезков.
+    </p>
+    <pre id="expResult"></pre>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

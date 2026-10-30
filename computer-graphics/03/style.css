@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  max-width: 950px;
+}
+
+section {
+  margin-bottom: 36px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.controls input[type="number"] {
+  width: 70px;
+}
+
+canvas {
+  border: 1px solid #333;
+  background: #fff;
+  display: block;
+}
+
+.message {
+  min-height: 20px;
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.message.error {
+  color: #c0392b;
+}
+
+.message.warning {
+  color: #b9770e;
+}
+
+.info {
+  font-family: monospace;
+  font-size: 13px;
+  min-height: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 10px;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #999;
+  padding: 4px 8px;
+  font-size: 13px;
+  text-align: center;
+}
+
+#stepsBody tr {
+  cursor: pointer;
+}
+
+#stepsBody tr.selected {
+  background: #fdebd0;
+}
+
+pre {
+  background: #fafafa;
+  border: 1px solid #ccc;
+  padding: 10px;
+  white-space: pre-wrap;
+}

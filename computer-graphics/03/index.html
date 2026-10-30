@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Окружность: алгоритм средней точки</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Окружность: алгоритм средней точки</h1>
+
+  <section>
+    <div class="controls">
+      <label>cx <input type="number" id="cx" value="20"></label>
+      <label>cy <input type="number" id="cy" value="15"></label>
+      <label>r <input type="number" id="r" value="10"></label>
+      <button id="build">Построить</button>
+      <button id="clear">Очистить</button>
+    </div>
+
+    <div class="controls">
+      <span>Примеры:</span>
+      <button class="preset" data-cx="20" data-cy="15" data-r="1">(20,15) r=1</button>
+      <button class="preset" data-cx="20" data-cy="15" data-r="5">(20,15) r=5</button>
+      <button class="preset" data-cx="20" data-cy="15" data-r="10">(20,15) r=10</button>
+      <button class="preset" data-cx="10" data-cy="10" data-r="8">(10,10) r=8</button>
+      <button class="preset" data-cx="35" data-cy="25" data-r="10">(35,25) r=10, за границей</button>
+    </div>
+
+    <div class="controls">
+      <label>
+        <input type="checkbox" id="symmetryOn">
+        Показать симметрию шага
+      </label>
+      <label>шаг <input type="number" id="stepInput" value="0" min="0"></label>
+    </div>
+
+    <p id="message" class="message"></p>
+
+    <canvas id="canvas" width="600" height="450"></canvas>
+    <p id="symmetryInfo" class="info"></p>
+  </section>
+
+  <section>
+    <h2>Таблица шагов (клик по строке показывает симметрию этого шага)</h2>
+    <table id="stepsTable">
+      <thead>
+        <tr>
+          <th>шаг</th><th>x</th><th>y</th><th>d до шага</th>
+          <th>выбранный вариант</th><th>d после шага</th>
+        </tr>
+      </thead>
+      <tbody id="stepsBody"></tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Сравнение: средняя точка и формула y = round(sqrt(r² - x²))</h2>
+    <div class="controls">
+      <button id="compare">Сравнить пиксели</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>r</th>
+          <th>базовых точек (средняя точка)</th>
+          <th>базовых точек (формула)</th>
+          <th>пикселей (средняя точка)</th>
+          <th>пикселей (формула)</th>
+          <th>совпали?</th>
+          <th>отличия</th>
+        </tr>
+      </thead>
+      <tbody id="compareBody"></tbody>
+    </table>
+
+    <h3>Время серии построений</h3>
+    <div class="controls">
+      <label>Повторов серии <input type="number" id="timingReps" value="2000"></label>
+      <label>Прогонов <input type="number" id="timingRuns" value="5"></label>
+      <button id="runTiming">Замерить</button>
+    </div>
+    <pre id="timingResult"></pre>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

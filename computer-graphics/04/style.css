@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  max-width: 950px;
+}
+
+section {
+  margin-bottom: 36px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.controls input[type="number"] {
+  width: 70px;
+}
+
+.controls textarea {
+  display: block;
+  margin-top: 4px;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+canvas {
+  border: 1px solid #333;
+  background: #fff;
+  display: block;
+}
+
+.legend {
+  font-size: 13px;
+  color: #555;
+}
+
+.message {
+  min-height: 20px;
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.message.error {
+  color: #c0392b;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 6px 0 14px;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #999;
+  padding: 4px 8px;
+  font-size: 13px;
+  text-align: center;
+}
+
+td.pass {
+  color: #1e8449;
+  font-weight: bold;
+}
+
+td.fail {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+h3 {
+  margin: 14px 0 0;
+  font-size: 15px;
+}
+
+pre {
+  background: #fafafa;
+  border: 1px solid #ccc;
+  padding: 10px;
+  white-space: pre-wrap;
+  font-size: 13px;
+}
+
+[hidden] {
+  display: none !important;
+}
