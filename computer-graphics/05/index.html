@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>КГ №5. Заполнение областей: Flood Fill и Scanline</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Заполнение областей: Flood Fill и Scanline</h1>
+    <p>Логический растр 40 × 30. Canvas только отображает массив <code>grid</code>
+      (0 — пусто, 1 — граница, 2 — заполнено).</p>
+  </header>
+
+  <main>
+    <section class="left">
+      <canvas id="canvas" width="640" height="480"></canvas>
+      <div id="status" class="status">Выберите фигуру и запустите заливку.</div>
+      <div id="legend" class="legend">
+        <span><i class="sw border"></i> граница</span>
+        <span><i class="sw flood"></i> Flood Fill (цвет = порядок обхода)</span>
+        <span><i class="sw scan"></i> Scanline</span>
+        <span><i class="sw cur"></i> текущий шаг</span>
+      </div>
+    </section>
+
+    <section class="right">
+      <fieldset>
+        <legend>Фигура</legend>
+        <select id="preset"></select>
+        <label class="inline"><input type="radio" name="click" id="modeSeed" checked> клик = старт Flood Fill</label>
+        <label class="inline"><input type="radio" name="click" id="modeRow"> клик = строка y для таблицы</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Заливка</legend>
+        <div class="buttons">
+          <button id="btnFlood">Flood Fill</button>
+          <button id="btnScan">Scanline Fill</button>
+          <button id="btnReset">Сбросить заливку</button>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Пошаговый режим Flood Fill</legend>
+        <input type="range" id="stepRange" min="0" max="0" value="0" disabled>
+        <div id="stepLabel" class="small">нет данных — сначала запустите Flood Fill</div>
+        <div class="buttons">
+          <button id="btnPrev" disabled>−1</button>
+          <button id="btnNext" disabled>+1</button>
+          <button id="btnPlay" disabled>▶ Авто</button>
+          <button id="btnAll" disabled>Все шаги</button>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Таблица одной строки (Scanline)</legend>
+        <label>y = <input type="number" id="rowY" min="0" max="29" value="10"></label>
+        <button id="btnRow">Показать</button>
+        <pre id="rowOut" class="out"></pre>
+      </fieldset>
+
+      <fieldset>
+        <legend>Обязательные тесты</legend>
+        <button id="btnTests">Запустить тесты 1–9</button>
+        <div id="testsOut"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Сравнение методов</legend>
+        <label>запусков в серии: <input type="number" id="runs" min="10" max="5000" value="300"></label>
+        <button id="btnCompare">Сравнить</button>
+        <div id="compareOut"></div>
+      </fieldset>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

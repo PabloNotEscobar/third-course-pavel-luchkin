@@ -1,0 +1,15 @@
+{
+  "name": "books-api-sqlite",
+  "version": "1.0.0",
+  "description": "Практическая работа №6: REST API с SQLite (Express + better-sqlite3)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node check.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^12.0.0",
+    "express": "^4.21.2"
+  }
+}
